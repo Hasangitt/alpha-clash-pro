@@ -11,16 +11,16 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <main class="bg-[#010313] bg-[url(images/background.png)] bg-center bg-no-repeat min-h-screen ">
-        <!-- home -->
-        <section class="home flex flex-col items-center justify-center hidden">
+    <main class="bg-[#010313] bg-[url(images/background.png)] bg-center bg-no-repeat">
+        <!-- home container -->
+        <section class="home flex flex-col items-center justify-center min-h-screen">
                 <h1 class="text-[170px] font-anton text-white">ALPHABET CLASH</h1>
                 <p class="text-2xl font-poppins text-white mb-14">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="bg-white text-black px-7 py-4 rounded-md text-xl">Play Now</button>
+                <button onclick="play()" class="btn">Play Now</button>
         </section>
 
         <!-- display/screen container-->
-        <section class="display">
+        <section class="play ground min-h-screen hidden">
             <!-- screen content -->
             <div class="flex justify-center pt-24 pb-24">
                 <div class="artboard artboard-horizontal phone-6 bg-[#FFFFFFCC] border-[#010313CC] border-[20px] rounded-lg ">
@@ -81,10 +81,25 @@
                     <span>1</span>
                   </button>
             </div>
-        </section>
-        <section class="score">
 
         </section>
-    </main>                                                                          
+
+        <!-- score container -->
+        <section class="score flex justify-center items-center min-h-screen hidden">     
+            <div class="text-white text-center bg-[#FFFFFF33] p-4 rounded-lg space-y-5">
+                    <h1 class="text-7xl">
+                        <span class=" font-bold">Score:</span>
+                        <span>14</span>
+                    </h1>
+                <button class="btn">Play Again</button>
+                <p>Practice will make you Pro</p>
+            </div>
+                
+        </section>
+    </main>
+    
+    
+
+    <script src="scripts/alpha-clash.js"></script>
 </body>
 </html>
