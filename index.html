@@ -11,18 +11,80 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-center bg-no-repeat">
-        <section class="home flex flex-col items-center justify-center min-h-screen">
+    <main class="bg-[#010313] bg-[url(images/background.png)] bg-center bg-no-repeat min-h-screen ">
+        <!-- home -->
+        <section class="home flex flex-col items-center justify-center hidden">
                 <h1 class="text-[170px] font-anton text-white">ALPHABET CLASH</h1>
                 <p class="text-2xl font-poppins text-white mb-14">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="bg-white text-black px-7 py-4 rounded-md">Play Now</button>
+                <button class="bg-white text-black px-7 py-4 rounded-md text-xl">Play Now</button>
         </section>
-        <section class="display">
 
+        <!-- display/screen container-->
+        <section class="display">
+            <!-- screen content -->
+            <div class="flex justify-center pt-24 pb-24">
+                <div class="artboard artboard-horizontal phone-6 bg-[#FFFFFFCC] border-[#010313CC] border-[20px] rounded-lg ">
+                    <div class=" flex justify-center">
+                        <p class="bg-[#010313CC] rounded-b-md p-2 text-white">Don't watch keyboard  while playing...</p>
+                    </div> 
+                   <div class="flex text-center h-full items-center justify-center">
+                        <p class="text-9xl text-black font-bold">Y</p>
+                   </div>
+                </div>
+            </div>
+            <!-- keyboard content -->
+            <div class="flex flex-col justify-center items-center">
+                <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd class="kbd">q</kbd>
+                    <kbd class="kbd">w</kbd>
+                    <kbd class="kbd">e</kbd>
+                    <kbd class="kbd">r</kbd>
+                    <kbd class="kbd">t</kbd>
+                    <kbd class="kbd">y</kbd>
+                    <kbd class="kbd">u</kbd>
+                    <kbd class="kbd">i</kbd>
+                    <kbd class="kbd">o</kbd>
+                    <kbd class="kbd">p</kbd>
+                  </div>
+                  <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd class="kbd">a</kbd>
+                    <kbd class="kbd">s</kbd>
+                    <kbd class="kbd">d</kbd>
+                    <kbd class="kbd">f</kbd>
+                    <kbd class="kbd">g</kbd>
+                    <kbd class="kbd">h</kbd>
+                    <kbd class="kbd">j</kbd>
+                    <kbd class="kbd">k</kbd>
+                    <kbd class="kbd">l</kbd>
+                  </div>
+                  <div class="my-1 flex w-full justify-center gap-1">
+                    <kbd class="kbd">z</kbd>
+                    <kbd class="kbd">x</kbd>
+                    <kbd class="kbd">c</kbd>
+                    <kbd class="kbd">v</kbd>
+                    <kbd class="kbd">b</kbd>
+                    <kbd class="kbd">n</kbd>
+                    <kbd class="kbd">m</kbd>
+                    <kbd class="kbd">/</kbd>
+                  </div>
+            </div>
+            <!-- display button content -->
+            <div class="flex justify-around">
+                <button class="btn bg-purple-600 text-white rounded-full">
+                    Life
+                    <img src="images/heart.svg.svg" alt="">
+                    <span>1</span>
+                  </button>
+                <button class="btn bg-blue-600 text-white rounded-full">
+                    Score
+                    <img src="images/d" alt="">
+                    <span>1</span>
+                  </button>
+            </div>
         </section>
         <section class="score">
 
         </section>
-    </main>
+    </main>                                                                          
 </body>
 </html>
