@@ -23,7 +23,3 @@ function play(){
 
 }
 
-function setBackgroundColor(elementId){
-    const element = document.getElementById(elementId);
-    element.classList.add('bg-orange-600');
-}
