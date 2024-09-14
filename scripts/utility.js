@@ -44,7 +44,7 @@ function removeBackgroundColor(elementId){
 // keyboard button press
 function handleKeyboradButtonPress(event){
     const playerPress = event.key;
-    console.log('player press', playerPress);
+    console.log('player pressed', playerPress);
 
     // get or set expected alphabet
     const getExpectedAlphabetElement = document.getElementById('current-alphabet');
@@ -52,15 +52,40 @@ function handleKeyboradButtonPress(event){
     const expectedAlphabet = expectedCureentAlphabet.toLowerCase();
     console.log(playerPress, expectedAlphabet);
 
-    // check matched or not
+    // check expected and press alphabet matched or not
     if(playerPress === expectedAlphabet){
         console.log('you got a point');
+        
+        // updated score:
+        // 1. get the score id and  current change the score to a number
+       const currentScoreElement = document.getElementById('current-score');
+       const currentScoreText = currentScoreElement.innerText;
+       const currentScore = parseInt(currentScoreText);
+       
+        // 2. change the score increase by 1
+       const finalScore = currentScore + 1;
+        // 3. set the score in score button
+       currentScoreElement.innerText = finalScore;
+
+        // update or continue play with new alphabet 
         removeBackgroundColor(expectedAlphabet);
         continueGame();
     }
    
     else{
         console.log('you miss a life time');
+        
+        // update life time:
+        // 1. get the life time id and change the current score to a number
+        const currentLifetimeElement = document.getElementById('life-time');
+        const currentLifeTime = currentLifetimeElement.innerText;
+        const lifeTime = parseInt(currentLifeTime);
+
+        // 2. decrease by the current life time
+        const totalLifeTime = lifeTime - 1;
+
+        // 3. set the total life time in the current life time
+        currentLifetimeElement.innerText = totalLifeTime;
     }
 
 }
