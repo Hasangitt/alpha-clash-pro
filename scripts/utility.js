@@ -86,8 +86,22 @@ function handleKeyboradButtonPress(event){
 
         // 3. set the total life time in the current life time
         currentLifetimeElement.innerText = totalLifeTime;
-    }
 
+         // game over:
+        if(totalLifeTime === 0){
+            gameOver()
+        }
+    }
 }
 // key press listener
 document.addEventListener('keyup', handleKeyboradButtonPress);
+
+// game over:
+function gameOver(){
+    // add hidden class in playground screen
+    const playgroundScreen = document.getElementById('playground-screen');
+    playgroundScreen.classList.add('hidden');
+    // remove hidden class in score screen 
+    const scoreScreen = document.getElementById('score-screen');
+    scoreScreen.classList.remove('hidden')
+}
