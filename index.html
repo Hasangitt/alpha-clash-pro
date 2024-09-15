@@ -86,12 +86,13 @@
 
         <!-- final score container -->
         <section id="score-screen" class="flex justify-center items-center hidden min-h-screen">     
-            <div class="text-white text-center bg-[#FFFFFF33] p-4 rounded-lg space-y-5">
-                    <h1 class="text-7xl">
+            <div class="text-white text-center bg-[#FFFFFF33] p-6 rounded-lg space-y-4">
+                <h3 class="text-4xl text-white font-anton">Game Over</h3>
+                <h1 class="text-7xl">
                         <span class=" font-bold">Score:</span>
-                        <span>14</span>
+                        <span id="score-result">0</span>
                     </h1>
-                <button class="btn">Play Again</button>
+                <button onclick="playAgain()" class="btn">Play Again</button>
                 <p>Practice will make you Pro</p>
             </div>
                 
