@@ -72,9 +72,7 @@ function handleKeyboradButtonPress(event){
         // *************update or continue play with new alphabet 
         removeBackgroundColor(expectedAlphabet);
         continueGame();
-    }
-   
-    else{
+    } else{
         console.log('you miss a life time');
         
         // // **************update life time:**************
@@ -89,9 +87,17 @@ function handleKeyboradButtonPress(event){
         // // 3. set the total life time in the current life time
         currentLifetimeElement.innerText = totalLifeTime;
 
+        
+
          // ***********game over:*****************
         if ( totalLifeTime === 0){
-            gameOver()
+        
+        gameOver()
+        const finalScoreElement = document.getElementById('score-result');
+        const currentScoreElement = document.getElementById('current-score');
+        const currentScoreText = currentScoreElement.innerText;
+        const currentScore = parseInt(currentScoreText);
+        finalScoreElement.innerText = currentScore;
         }
     }
 }
@@ -119,6 +125,13 @@ function playAgain(){
    // add hidden class in playground screen
    const playgroundScreen = document.getElementById('playground-screen');
    playgroundScreen.classList.remove('hidden');
+
+
+    const currentLifetimeElement = document.getElementById('life-time');
+    currentLifetimeElement.innerText = 5;
+
+    const currentScoreElement = document.getElementById('current-score');
+    currentScoreElement.innerText = 0;
     
    removeBackgroundColor(expectedAlphabet);
    continueGame()
